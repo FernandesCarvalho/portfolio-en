@@ -1,7 +1,12 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Wrap = styled.section`
   padding: 48px 24px;
+  color: #e1e1e6;
+
+  h2 {
+    margin-bottom: 24px;
+  }
 `;
 
 const Form = styled.form`
@@ -38,9 +43,9 @@ export default function ContactForm() {
     <Wrap id="contact">
       <h2>Contato</h2>
       <Form onSubmit={(e) => e.preventDefault()}>
-        <Input placeholder="Seu nome" />
-        <Input placeholder="Seu email" />
-        <Textarea placeholder="Mensagem" />
+        <Input placeholder="Name" />
+        <Input placeholder="Email" />
+        <Textarea placeholder="Message" />
         <Button type="submit">Enviar</Button>
       </Form>
     </Wrap>
