@@ -29,17 +29,18 @@ const Nav = styled.nav`
 `;
 
 const NavLink = styled.a`
-  color: #E1E1E6;
+  color: #e1e1e6;
   text-decoration: none;
   font-weight: 500;
   padding: 8px 10px;
   border-radius: 6px;
+  margin-left: 2px;
 
   &:hover {
-    background: #7F8FA6;
+    background: #7f8fa6;
+  }
   &.active {
-    background: #00BFA6;
-    font-weight: 700;
+    background: #00bfa6;
   }
 `;
 
