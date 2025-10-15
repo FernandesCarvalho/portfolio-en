@@ -1,35 +1,36 @@
-import styles from 'styled-components';
+import styled from 'styled-components';
 import { IoIosConstruct } from 'react-icons/io';
 import { IoMdSearch } from 'react-icons/io';
 import { FaRecycle } from 'react-icons/fa';
 import { MdOutlineDeveloperMode } from 'react-icons/md';
 
-const Container = styles.section`
-    padding: 24px;
-    display: flex;
-    justify-content: space-between;
+const Container = styled.section`
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
 `;
 
-const Card = styles.div`
-    width: 200px;
-    height: auto;
-    background: #1E2026;
-    box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06);
-    border-radius: 10px;
-    padding: 16px;
+const Card = styled.div`
+  width: 200px;
+  height: auto;
+  background: #1e2026;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06);
+  border-radius: 10px;
+  padding: 16px;
 `;
 
-const Icon = styles.div`
-    padding: 8px;
-    font-size: 40px;
-    color: #00BFA6;
+const Icon = styled.div`
+  padding: 8px;
+  font-size: 40px;
+  color: #00bfa6;
 `;
 
-const Title = styles.h3`
-color: #E1E1E6;
+const Title = styled.h3`
+  color: #e1e1e6;
 `;
-const Description = styles.p`
-color: #7F8FA6;`;
+const Description = styled.p`
+  color: #7f8fa6;
+`;
 
 export default function Services() {
   return (
