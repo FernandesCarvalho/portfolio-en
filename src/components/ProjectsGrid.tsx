@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import contactsList from '../assets/images/ContactList.png';
-import eFood from '../assets/images/E-food.png';
+import eFood from '../assets/images/e-food.png';
 import miniBooks from '../assets/images/Minibooks.png';
 
 const Grid = styled.section`
