@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 const Wrap = styled.section`
   padding: 48px 24px;
-  color: #e1e1e6;
 
   h2 {
-    margin-bottom: 24px;
+    margin-bottom: 32px;
+    color: #e1e1e6;
   }
 `;
 

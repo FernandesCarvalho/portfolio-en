@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import contactsList from '../assets/images/contacts-list.png';
-import eFood from '../assets/images/e-food.png';
-import miniBooks from '../assets/images/mini-books.png';
+import contactsList from '../assets/images/ContactList.png';
+import eFood from '../assets/images/E-food.png';
+import miniBooks from '../assets/images/Minibooks.png';
 
 const Grid = styled.section`
   padding: 48px 24px;
 
   h2 {
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     color: #e1e1e6;
   }
 `;
@@ -49,7 +49,6 @@ const ImgWrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f3f4f6;
   img {
     width: 100%;
     height: 100%;

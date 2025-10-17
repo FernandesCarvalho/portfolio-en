@@ -11,16 +11,19 @@ const Container = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #1e2026;
+  background: #1e2026f1;
   z-index: 9999;
-  box-shadow: 0 1px 0 rgba(2, 6, 23, 0.06);
+  box-shadow: 0 1px 0 rgba(2, 6, 23, 0.01);
+  border-bottom: 1px solid #484c55ff;
 `;
 
 const Logo = styled.a`
-  font-weight: 700;
-  font-size: 1.1rem;
+  font-family: 'Fira Code', monospace;
+  font-weight: 400;
+  font-size: 1.5rem;
   color: #e1e1e6;
   text-decoration: none;
+  letter-spacing: 2px;
 `;
 
 const Nav = styled.nav`
@@ -49,7 +52,7 @@ export default function Header() {
 
   return (
     <Container>
-      <Logo href="/">Fernandes's Portfolio</Logo>
+      <Logo href="/">&lt;/FC&gt;</Logo>
       <Nav>
         <NavLink className={active === 'home' ? 'active' : ''} href="#home">
           Home
@@ -61,7 +64,7 @@ export default function Header() {
           Projects
         </NavLink>
         <NavLink className={active === 'contact' ? 'active' : ''} href="#contact">
-          Contact
+          Contacts
         </NavLink>
       </Nav>
     </Container>
