@@ -96,7 +96,7 @@ const Tools = styled.div`
 
   @media (max-width: 768px) {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
 
