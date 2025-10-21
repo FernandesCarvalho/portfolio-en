@@ -28,8 +28,20 @@ const Container = styled.section`
 `;
 
 const Content = styled.section`
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    justify-items: center;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 `;
 
 const Card = styled.div`
@@ -39,6 +51,14 @@ const Card = styled.div`
   box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06);
   border-radius: 10px;
   padding: 16px;
+
+  @media (max-width: 1024px) {
+    width: 300px;
+  }
+
+  @media (max-width: 720px) {
+    width: 90%;
+  }
 `;
 
 const Icon = styled.div`
@@ -57,11 +77,33 @@ const Description = styled.p`
 const Tools = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-top: 40px;
   p {
-    margin-top: 40px;
+    margin-top: 4px;
     img {
       margin: 12px;
       height: 80px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    p {
+      img {
+        height: 60px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    justify-items: center;
+    align-items: center;
+
+    p {
+      img {
+        height: 40px;
+      }
     }
   }
 `;

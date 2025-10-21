@@ -9,6 +9,10 @@ const Wrap = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
 
+  @media (max-width: 768px) {
+    padding: 48px 24px;
+  }
+
   div {
     p {
       color: #7f8fa6;
@@ -16,6 +20,17 @@ const Wrap = styled.section`
       margin-right: 40px;
       margin-bottom: 32px;
     }
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    text-align: center;
+
+    div {
+      p {
+        margin: 0 auto;
+        padding-bottom: 24px;
+      }
   }
 `;
 
@@ -39,6 +54,14 @@ const Description = styled.span`
 
 const Image = styled.img`
   width: 500px;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export default function Hero() {

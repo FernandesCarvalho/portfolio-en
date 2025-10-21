@@ -1,6 +1,12 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 import useActiveSection from '../hooks/useActiveSection';
 import logoImg from '../assets/images/PortfolioIcon.png';
+import { FiMenu, FiX } from 'react-icons/fi';
+
+interface MobileMenuProps {
+  open: boolean;
+}
 
 const Container = styled.header`
   position: fixed;
@@ -44,9 +50,64 @@ const NavLink = styled.a`
   &.active {
     background: #00bfa6;
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const MenuButton = styled.button`
+  background: none;
+  border: none;
+  color: #e1e1e6;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  z-index: 10000;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
+const MobileMenu = styled.div<MobileMenuProps>`
+  position: fixed;
+  top: 60px;
+  right: ${({ open }) => (open ? '0' : '-100%')};
+  width: 100%;
+  height: calc(100vh - 60px);
+  background: #1e2026;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  transition: right 0.3s ease;
+
+  a {
+    color: #e1e1e6;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 12px 20px;
+    border-radius: 8px;
+
+    &:hover {
+      background: #00bfa6;
+    }
+
+    &.active {
+      background: #00bfa6;
+    }
+  }
+
+  @media (min-width: 769px) {
+    display: none;
+  }
 `;
 
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
   const active = useActiveSection(['home', 'services', 'projects', 'contact']);
 
   return (
@@ -70,6 +131,39 @@ export default function Header() {
           Contacts
         </NavLink>
       </Nav>
+      <MenuButton onClick={() => setMenuOpen(!menuOpen)}>
+        {menuOpen ? <FiX /> : <FiMenu />}
+      </MenuButton>
+      <MobileMenu open={menuOpen}>
+        <a
+          onClick={() => setMenuOpen(false)}
+          className={active === 'home' ? 'active' : ''}
+          href="#home"
+        >
+          Home
+        </a>
+        <a
+          onClick={() => setMenuOpen(false)}
+          className={active === 'services' ? 'active' : ''}
+          href="#services"
+        >
+          Services
+        </a>
+        <a
+          onClick={() => setMenuOpen(false)}
+          className={active === 'projects' ? 'active' : ''}
+          href="#projects"
+        >
+          Projects
+        </a>
+        <a
+          onClick={() => setMenuOpen(false)}
+          className={active === 'contact' ? 'active' : ''}
+          href="#contact"
+        >
+          Contacts
+        </a>
+      </MobileMenu>
     </Container>
   );
 }

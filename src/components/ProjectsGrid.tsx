@@ -32,15 +32,17 @@ const CardLink = styled.a<{ reverse?: boolean }>`
   flex-direction: ${(p) => (p.reverse ? 'row-reverse' : 'row')};
   text-decoration: none;
   color: inherit;
-
   transition: transform 180ms ease, box-shadow 180ms ease;
+
   &:hover {
     transform: translateY(-6px);
     box-shadow: 0 14px 36px rgba(2, 6, 23, 0.12);
   }
 
-  @media (max-width: 720px) {
+  @media (max-width: 768px) {
     flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 `;
 
@@ -59,10 +61,20 @@ const ImgWrap = styled.div`
     border-radius: 8px;
   }
 
-  @media (max-width: 720px) {
+  @media (max-width: 1024px) {
+    flex: 0 0 260px;
+  }
+
+  @media (max-width: 768px) {
+    flex: unset;
     width: 100%;
-    flex: 0 0 auto;
-    height: 220px;
+    height: auto;
+
+    img {
+      width: 100%;
+      height: auto;
+      onject-fit: contain;
+    }
   }
 `;
 const Content = styled.div`
