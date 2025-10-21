@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const Foot = styled.footer`
+  margin-top: -48px;
   padding: 24px;
   text-align: center;
   color: #64748b;

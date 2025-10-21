@@ -12,7 +12,13 @@ import bootstrap from '../assets/images/bootstrap.png';
 import typescript from '../assets/images/typescript.png';
 import vue from '../assets/images/vue.png';
 
+const Section = styled.section`
+  background: #1e2026;
+`;
+
 const Container = styled.section`
+  max-width: 1024px;
+  margin: 0 auto;
   padding: 24px;
 
   h2 {
@@ -29,7 +35,7 @@ const Content = styled.section`
 const Card = styled.div`
   width: 200px;
   height: auto;
-  background: #1e2026;
+  background: #0f1115;
   box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06);
   border-radius: 10px;
   padding: 16px;
@@ -63,77 +69,79 @@ const Tools = styled.div`
 export default function Services() {
   return (
     <>
-      <Container id="services">
-        <h2>Services and tools</h2>
-        <Content>
-          <Card>
-            <Icon>
-              <IoIosConstruct />
-            </Icon>
-            <Title>Web Development</Title>
-            <Description>
-              Custom web solutions built with modern technologies to ensure performance,
-              scalability, and seamless user experience.
-            </Description>
-          </Card>
-          <Card>
-            <Icon>
-              <IoMdSearch />
-            </Icon>
-            <Title>SEO Optimization</Title>
-            <Description>
-              Comprehensive search engine optimization focused on improving visibility, increasing
-              organic traffic, and enhancing website authority.
-            </Description>
-          </Card>
-          <Card>
-            <Icon>
-              <FaRecycle />
-            </Icon>
-            <Title>Website Redesign</Title>
-            <Description>
-              Modernization of outdated websites with improved aesthetics, usability, and
-              functionality aligned with brand identity.
-            </Description>
-          </Card>
-          <Card>
-            <Icon>
-              <MdOutlineDeveloperMode />
-            </Icon>
-            <Title>Responsive Design</Title>
-            <Description>
-              Design approach that ensures flawless display and performance across all devices —
-              desktop, tablet, and mobile.
-            </Description>
-          </Card>
-        </Content>
-        <Tools>
-          <p>
-            <img src={html} alt="html" />
-          </p>
-          <p>
-            <img src={css} alt="css" />
-          </p>
-          <p>
-            <img src={javascript} alt="javascript" />
-          </p>
-          <p>
-            <img src={node} alt="node" />
-          </p>
-          <p>
-            <img src={typescript} alt="typescript" />
-          </p>
-          <p>
-            <img src={react} alt="react" />
-          </p>
-          <p>
-            <img src={vue} alt="vue" />
-          </p>
-          <p>
-            <img src={bootstrap} alt="bootstrap" />
-          </p>
-        </Tools>
-      </Container>
+      <Section>
+        <Container id="services">
+          <h2>Services and tools</h2>
+          <Content>
+            <Card>
+              <Icon>
+                <IoIosConstruct />
+              </Icon>
+              <Title>Web Development</Title>
+              <Description>
+                Custom web solutions built with modern technologies to ensure performance,
+                scalability, and seamless user experience.
+              </Description>
+            </Card>
+            <Card>
+              <Icon>
+                <IoMdSearch />
+              </Icon>
+              <Title>SEO Optimization</Title>
+              <Description>
+                Comprehensive search engine optimization focused on improving visibility, increasing
+                organic traffic, and enhancing website authority.
+              </Description>
+            </Card>
+            <Card>
+              <Icon>
+                <FaRecycle />
+              </Icon>
+              <Title>Website Redesign</Title>
+              <Description>
+                Modernization of outdated websites with improved aesthetics, usability, and
+                functionality aligned with brand identity.
+              </Description>
+            </Card>
+            <Card>
+              <Icon>
+                <MdOutlineDeveloperMode />
+              </Icon>
+              <Title>Responsive Design</Title>
+              <Description>
+                Design approach that ensures flawless display and performance across all devices —
+                desktop, tablet, and mobile.
+              </Description>
+            </Card>
+          </Content>
+          <Tools>
+            <p>
+              <img src={html} alt="html" />
+            </p>
+            <p>
+              <img src={css} alt="css" />
+            </p>
+            <p>
+              <img src={javascript} alt="javascript" />
+            </p>
+            <p>
+              <img src={node} alt="node" />
+            </p>
+            <p>
+              <img src={typescript} alt="typescript" />
+            </p>
+            <p>
+              <img src={react} alt="react" />
+            </p>
+            <p>
+              <img src={vue} alt="vue" />
+            </p>
+            <p>
+              <img src={bootstrap} alt="bootstrap" />
+            </p>
+          </Tools>
+        </Container>
+      </Section>
     </>
   );
 }

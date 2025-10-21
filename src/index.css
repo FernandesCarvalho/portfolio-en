@@ -23,8 +23,6 @@ a {
 }
 
 main {
-  max-width: 1024px;
-  margin: 0 auto;
   padding-bottom: 48px;
   padding-top: 80px; /* space for fixed header (adjust if header height changes) */
 }

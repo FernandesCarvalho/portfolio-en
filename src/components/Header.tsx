@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import useActiveSection from '../hooks/useActiveSection';
+import logoImg from '../assets/images/PortfolioIcon.png';
 
 const Container = styled.header`
   position: fixed;
@@ -18,12 +19,10 @@ const Container = styled.header`
 `;
 
 const Logo = styled.a`
-  font-family: 'Fira Code', monospace;
-  font-weight: 400;
-  font-size: 1.5rem;
-  color: #e1e1e6;
-  text-decoration: none;
-  letter-spacing: 2px;
+  img {
+    width: 40px;
+    margin-left: 16px;
+  }
 `;
 
 const Nav = styled.nav`
@@ -52,7 +51,11 @@ export default function Header() {
 
   return (
     <Container>
-      <Logo href="/">&lt;/FC&gt;</Logo>
+      <Logo>
+        <a href="#home">
+          <img src={logoImg} alt="" />
+        </a>
+      </Logo>
       <Nav>
         <NavLink className={active === 'home' ? 'active' : ''} href="#home">
           Home

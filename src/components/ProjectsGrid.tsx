@@ -4,6 +4,8 @@ import eFood from '../assets/images/e-food.png';
 import miniBooks from '../assets/images/Minibooks.png';
 
 const Grid = styled.section`
+  max-width: 1024px;
+  margin: 0 auto;
   padding: 48px 24px;
 
   h2 {
