@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import useActiveSection from '../hooks/useActiveSection';
 import logoImg from '../assets/images/PortfolioIcon.png';
 import { FiMenu, FiX } from 'react-icons/fi';
+import Modal from './Modal';
 
 interface MobileMenuProps {
   open: boolean;
@@ -36,6 +37,17 @@ const Nav = styled.nav`
   gap: 12px;
 `;
 
+const NavLink2 = styled.a`
+  background-color: #a42b2bff;
+  color: #e1e1e6;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 10px;
+  border-radius: 6px;
+  margin-left: 2px;
+  cursor: pointer;
+`;
+
 const NavLink = styled.a`
   color: #e1e1e6;
   text-decoration: none;
@@ -63,7 +75,7 @@ const MenuButton = styled.button`
   font-size: 28px;
   cursor: pointer;
   display: none;
-  z-index: 10000;
+  z-index: 10001;
 
   @media (max-width: 768px) {
     display: block;
@@ -108,6 +120,7 @@ const MobileMenu = styled.div<MobileMenuProps>`
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
   const active = useActiveSection(['home', 'services', 'projects', 'contact']);
 
   return (
@@ -118,6 +131,7 @@ export default function Header() {
         </a>
       </Logo>
       <Nav>
+        <NavLink2 onClick={() => setModalOpen(true)}>About</NavLink2>
         <NavLink className={active === 'home' ? 'active' : ''} href="#home">
           Home
         </NavLink>
@@ -164,6 +178,7 @@ export default function Header() {
           Contacts
         </a>
       </MobileMenu>
+      {modalOpen && <Modal onClose={() => setModalOpen(false)} />}
     </Container>
   );
 }

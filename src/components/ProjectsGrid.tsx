@@ -73,7 +73,7 @@ const ImgWrap = styled.div`
     img {
       width: 100%;
       height: auto;
-      onject-fit: contain;
+      object-fit: contain;
     }
   }
 `;
