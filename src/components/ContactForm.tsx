@@ -126,7 +126,7 @@ export default function ContactForm() {
                 <FaLinkedin id="icon" />
               </a>
               <a
-                href="https://github.com/FernandesVentura"
+                href="https://github.com/FernandesCarvalho"
                 target="_blank"
                 rel="noopener noreferrer"
                 referrerPolicy="no-referrer"
