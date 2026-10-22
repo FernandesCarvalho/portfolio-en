@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import contactsList from '../assets/images/ContactList.png';
 import eFood from '../assets/images/e-food.png';
 import miniBooks from '../assets/images/Minibooks.png';
+import Mecaniko from '../assets/images/Mecaniko.png'
 
 const Grid = styled.section`
   max-width: 1024px;
@@ -91,6 +92,12 @@ const Content = styled.div`
 
 export default function ProjectsGrid() {
   const mock = [
+    {
+      title: 'MECANIKO',
+      desc: 'MECANIKO is a full-stack management platform designed for modern automotive workshops. It centralizes repair orders, customers and vehicles, inventory, estimates, approvals, finances, warranties and rental fleet management in one intuitive system. Designed and developed from the ground up with a strong focus on real-world workflows, usability, responsive design and scalable business logic.',
+      img: Mecaniko,
+      link: 'https://garage-app-blush-delta.vercel.app/',
+    },
     {
       title: 'E-Food',
       desc: 'The E-Food project is a web platform developed to simulate an online food delivery service, connecting users to a variety of restaurants and cuisines. The application offers an intuitive browsing experience, allowing users to explore different gastronomic options and discover new establishments.',
