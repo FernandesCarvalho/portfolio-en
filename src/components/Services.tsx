@@ -11,6 +11,7 @@ import node from '../assets/images/node.webp';
 import bootstrap from '../assets/images/bootstrap.webp';
 import typescript from '../assets/images/typescript.webp';
 import vue from '../assets/images/vue.webp';
+import Clogo from '../assets/images/C.png';
 
 const Section = styled.section`
   background: #1e2026;
@@ -166,6 +167,9 @@ export default function Services() {
             </p>
             <p>
               <img src={javascript} loading="lazy" decoding="async" alt="javascript" />
+            </p>
+            <p>
+              <img src={Clogo} loading="lazy" decoding="async" alt="C" />
             </p>
             <p>
               <img src={node} loading="lazy" decoding="async" alt="node" />

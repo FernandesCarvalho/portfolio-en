@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import photo from '../assets/images/fotome.webp';
+import photo from '../assets/images/profile-picture.png';
 export default function Modal({ onClose }: { onClose: () => void }) {
   const dialog = useRef<HTMLDialogElement>(null);
   useEffect(() => {
@@ -38,17 +38,18 @@ export default function Modal({ onClose }: { onClose: () => void }) {
       }}
     >
       <div className="about-content">
-        <button className="dialog-close" autoFocus onClick={onClose} aria-label="Close about me">
-          ×
-        </button>
-        <img
-          src={photo}
-          alt="Fernandes Carvalho"
-          width="160"
-          height="200"
-          className="profile-photo"
-        />
-        <h2 id="about-title">About me</h2>
+        <div className="about-content-header">
+          <div>
+            <h2 id="about-title">About me</h2>
+          </div>
+          <img
+            src={photo}
+            alt="Fernandes Carvalho"
+            width="200"
+            height="200"
+            className="profile-photo"
+          />
+        </div>
         <p>
           I'm Fernandes Carvalho, a front-end developer based in Porto, Portugal. I build web
           interfaces with React and TypeScript, with a focus on clear interactions and maintainable

@@ -90,9 +90,6 @@ export default function Hero() {
             <a className="button secondary" href="mailto:fernandes.ventura25@gmail.com">
               Get in touch
             </a>
-            <a href="/FernandesCV.pdf" target="_blank" rel="noopener noreferrer">
-              View CV (PDF)
-            </a>
           </div>
         </div>
         <Image src={HeroImg} alt="" width="500" height="500" />

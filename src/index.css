@@ -369,6 +369,11 @@ main:focus {
   position: relative;
   overflow-wrap: anywhere;
 }
+.about-content-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
 .dialog-close {
   position: absolute;
   top: 8px;
@@ -476,6 +481,12 @@ main:focus {
   }
   .about-content {
     padding: 24px;
+
+  }
+  .about-content-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
   }
 }
 @media (prefers-reduced-motion: reduce) {
