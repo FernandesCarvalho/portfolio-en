@@ -3,14 +3,14 @@ import { IoIosConstruct } from 'react-icons/io';
 import { IoMdSearch } from 'react-icons/io';
 import { FaRecycle } from 'react-icons/fa';
 import { MdOutlineDeveloperMode } from 'react-icons/md';
-import html from '../assets/images/html.png';
-import css from '../assets/images/css.png';
-import javascript from '../assets/images/javascript.png';
-import react from '../assets/images/react.png';
-import node from '../assets/images/node.png';
-import bootstrap from '../assets/images/bootstrap.png';
-import typescript from '../assets/images/typescript.png';
-import vue from '../assets/images/vue.png';
+import html from '../assets/images/html.webp';
+import css from '../assets/images/css.webp';
+import javascript from '../assets/images/javascript.webp';
+import react from '../assets/images/react.webp';
+import node from '../assets/images/node.webp';
+import bootstrap from '../assets/images/bootstrap.webp';
+import typescript from '../assets/images/typescript.webp';
+import vue from '../assets/images/vue.webp';
 
 const Section = styled.section`
   background: #1e2026;
@@ -45,7 +45,7 @@ const Content = styled.section`
 `;
 
 const Card = styled.div`
-  width: 200px;
+  width: 100%;
   height: auto;
   background: #0f1115;
   box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06);
@@ -53,11 +53,11 @@ const Card = styled.div`
   padding: 16px;
 
   @media (max-width: 1024px) {
-    width: 300px;
+    width: 100%;
   }
 
   @media (max-width: 720px) {
-    width: 90%;
+    width: 100%;
   }
 `;
 
@@ -76,13 +76,14 @@ const Description = styled.p`
 
 const Tools = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-top: 40px;
   p {
     margin-top: 4px;
     img {
       margin: 12px;
-      height: 80px;
+      height: 64px;
     }
   }
 
@@ -113,7 +114,7 @@ export default function Services() {
     <>
       <Section>
         <Container id="services">
-          <h2>Services and tools</h2>
+          <h2>Skills & services</h2>
           <Content>
             <Card>
               <Icon>
@@ -129,10 +130,10 @@ export default function Services() {
               <Icon>
                 <IoMdSearch />
               </Icon>
-              <Title>SEO Optimization</Title>
+              <Title>Technical SEO foundations</Title>
               <Description>
-                Comprehensive search engine optimization focused on improving visibility, increasing
-                organic traffic, and enhancing website authority.
+                Semantic page structure, descriptive metadata and performance-conscious
+                implementation to support discoverability.
               </Description>
             </Card>
             <Card>
@@ -158,28 +159,28 @@ export default function Services() {
           </Content>
           <Tools>
             <p>
-              <img src={html} alt="html" />
+              <img src={html} loading="lazy" decoding="async" alt="html" />
             </p>
             <p>
-              <img src={css} alt="css" />
+              <img src={css} loading="lazy" decoding="async" alt="css" />
             </p>
             <p>
-              <img src={javascript} alt="javascript" />
+              <img src={javascript} loading="lazy" decoding="async" alt="javascript" />
             </p>
             <p>
-              <img src={node} alt="node" />
+              <img src={node} loading="lazy" decoding="async" alt="node" />
             </p>
             <p>
-              <img src={typescript} alt="typescript" />
+              <img src={typescript} loading="lazy" decoding="async" alt="typescript" />
             </p>
             <p>
-              <img src={react} alt="react" />
+              <img src={react} loading="lazy" decoding="async" alt="react" />
             </p>
             <p>
-              <img src={vue} alt="vue" />
+              <img src={vue} loading="lazy" decoding="async" alt="vue" />
             </p>
             <p>
-              <img src={bootstrap} alt="bootstrap" />
+              <img src={bootstrap} loading="lazy" decoding="async" alt="bootstrap" />
             </p>
           </Tools>
         </Container>

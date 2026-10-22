@@ -20,7 +20,7 @@ export default function useActiveSection(sectionIds: string[], rootMargin = '-40
           winner = id;
         }
       }
-      if (winner !== activeId) setActiveId(winner);
+      setActiveId(winner);
     };
 
     const observer = new IntersectionObserver(
@@ -43,7 +43,7 @@ export default function useActiveSection(sectionIds: string[], rootMargin = '-40
       observer.disconnect();
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
     };
-  }, [sectionIds, rootMargin, activeId]);
+  }, [sectionIds, rootMargin]);
 
   return activeId;
 }

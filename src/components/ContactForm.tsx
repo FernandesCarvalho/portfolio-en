@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 import { FaLinkedin } from 'react-icons/fa';
 import { FaGithubSquare } from 'react-icons/fa';
-import { IoLogoVercel } from 'react-icons/io5';
 import { CiMail } from 'react-icons/ci';
-import contactsImg from '../assets/images/IlustracoesPortfolioFernandes-04.png';
+import contactsImg from '../assets/images/IlustracoesPortfolioFernandes-04.webp';
 
 const Section = styled.section`
   background: #1e2026;
@@ -34,7 +33,7 @@ const Social = styled.div`
     color: #e1e1e6;
   }
 
-  #icon {
+  .social-icon {
     font-size: 40px;
     margin: 0 16px;
     color: #7f8fa6;
@@ -52,7 +51,8 @@ const Social = styled.div`
 `;
 
 const ContatsImg = styled.img`
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   margin: 0 auto;
 
   @media (max-width: 768px) {
@@ -79,7 +79,7 @@ const SocialContact = styled.div`
     display: inline-flex;
     align-items: center;
     background: #7f8fa6;
-    color: #fff;
+    color: #0f1115;
     padding: 10px 20px;
     border-radius: 12px;
     text-decoration: none;
@@ -93,9 +93,9 @@ const SocialContact = styled.div`
 
     #icon2 {
       font-size: 24px;
-      margin- 0;
+      margin: 0;
       margin-right: 8px; /* espaçamento entre o ícone e o texto */
-      color: #fff;
+      color: #0f1115;
     }
   }
 `;
@@ -104,9 +104,9 @@ export default function ContactForm() {
   return (
     <Section>
       <Wrap id="contact">
-        {/* <h2>Contacts</h2> */}
+        <h2>Contact</h2>
         <Social>
-          <ContatsImg src={contactsImg} alt="" />
+          <ContatsImg src={contactsImg} alt="" loading="lazy" />
           <div>
             <SocialContact>
               <h3>Let's talk about your project</h3>
@@ -118,28 +118,22 @@ export default function ContactForm() {
             <SocialLinks>
               <h3>You can find me</h3>
               <a
+                aria-label="LinkedIn profile"
                 href="https://www.linkedin.com/in/fernandes-carvalho/"
                 target="_blank"
                 rel="noopener noreferrer"
                 referrerPolicy="no-referrer"
               >
-                <FaLinkedin id="icon" />
+                <FaLinkedin className="social-icon" />
               </a>
               <a
+                aria-label="GitHub profile"
                 href="https://github.com/FernandesCarvalho"
                 target="_blank"
                 rel="noopener noreferrer"
                 referrerPolicy="no-referrer"
               >
-                <FaGithubSquare id="icon" />
-              </a>
-              <a
-                href="https://vercel.com/fernandes-ventura-s-projects"
-                target="_blank"
-                rel="noopener noreferrer"
-                referrerPolicy="no-referrer"
-              >
-                <IoLogoVercel id="icon" />
+                <FaGithubSquare className="social-icon" />
               </a>
             </SocialLinks>
           </div>

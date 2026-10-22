@@ -9,5 +9,5 @@ const Foot = styled.footer`
 `;
 
 export default function Footer() {
-  return <Foot>© {new Date().getFullYear()} — My Portfolio</Foot>;
+  return <Foot>© {new Date().getFullYear()} — Fernandes Carvalho</Foot>;
 }

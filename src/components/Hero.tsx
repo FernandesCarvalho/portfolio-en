@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import HeroImg from '../assets/images/IlustracoesPortfolioFernandes-05.png';
+import HeroImg from '../assets/images/IlustracoesPortfolioFernandes-05.webp';
 
 const Wrap = styled.section`
   max-width: 1024px;
@@ -31,6 +31,7 @@ const Wrap = styled.section`
         margin: 0 auto;
         padding-bottom: 24px;
       }
+    }
   }
 `;
 
@@ -54,6 +55,8 @@ const Description = styled.span`
 
 const Image = styled.img`
   width: 500px;
+  height: auto;
+  align-self: center;
 
   @media (max-width: 1024px) {
     width: 100%;
@@ -73,16 +76,26 @@ export default function Hero() {
             Hello,
             <br /> I'm <span>Fernandes</span>,
             <br />
-            Front End Developer
+            Front-end Developer
           </Main>
           <p>
-            Focused on writing efficient, maintainable code and delivering modern, high-performance
-            web applications. Driven by curiosity and continuous learning, I strive to transform
-            complex problems into simple, elegant solutions.
+            I build web interfaces with React and TypeScript, from focused everyday tools to a
+            complete workshop management platform.
           </p>
-          <Description>Crafting clean, fast, and accessible user experiences.</Description>
+          <Description>Based in Porto, Portugal.</Description>
+          <div className="actions">
+            <a className="button" href="#projects">
+              Explore my projects
+            </a>
+            <a className="button secondary" href="mailto:fernandes.ventura25@gmail.com">
+              Get in touch
+            </a>
+            <a href="/FernandesCV.pdf" target="_blank" rel="noopener noreferrer">
+              View CV (PDF)
+            </a>
+          </div>
         </div>
-        <Image src={HeroImg} alt="Ilustration of a setup" />
+        <Image src={HeroImg} alt="" width="500" height="500" />
       </Wrap>
     </>
   );
