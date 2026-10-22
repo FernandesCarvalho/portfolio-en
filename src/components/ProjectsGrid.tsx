@@ -93,8 +93,8 @@ const Content = styled.div`
 export default function ProjectsGrid() {
   const mock = [
     {
-      title: 'MECANIKO',
-      desc: 'MECANIKO is a full-stack management platform designed for modern automotive workshops. It centralizes repair orders, customers and vehicles, inventory, estimates, approvals, finances, warranties and rental fleet management in one intuitive system. Designed and developed from the ground up with a strong focus on real-world workflows, usability, responsive design and scalable business logic.',
+      title: 'Mecaniko',
+      desc: 'Mecaniko is a full-stack management platform designed for modern automotive workshops. It centralizes repair orders, customers and vehicles, inventory, estimates, approvals, finances, warranties and rental fleet management in one intuitive system. Designed and developed from the ground up with a strong focus on real-world workflows, usability, responsive design and scalable business logic.',
       img: Mecaniko,
       link: 'https://garage-app-blush-delta.vercel.app/',
     },
