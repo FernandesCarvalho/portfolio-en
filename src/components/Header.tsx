@@ -47,14 +47,10 @@ export default function Header() {
               {id === 'services' ? 'Skills & services' : id.charAt(0).toUpperCase() + id.slice(1)}
             </a>
           ))}
-          <button
-            onClick={() => {
-              setAboutOpen(true);
-            }}
-          >
-            About me
-          </button>
         </nav>
+        <button className="about-button" aria-haspopup="dialog" onClick={() => setAboutOpen(true)}>
+          About me <span aria-hidden="true">↗</span>
+        </button>
       </header>
       {aboutOpen && <Modal onClose={() => setAboutOpen(false)} />}
     </>

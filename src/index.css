@@ -169,34 +169,158 @@ main:focus {
 }
 .featured-project {
   margin: 28px 0;
-  padding: 32px;
-  border: 1px solid #00bfa6;
-  border-radius: 16px;
-  background: #1e2026;
+  border: 1px solid #397d72;
+  border-radius: 18px;
+  overflow: hidden;
+  background: linear-gradient(120deg, #1e292b, #171c23 65%);
 }
-.featured-project h3 {
-  font-size: 2rem;
+.featured-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 28px;
+  border-bottom: 1px solid #ffffff12;
 }
 .eyebrow {
-  color: #61dfca !important;
-  font-size: 0.85rem;
-  letter-spacing: 0.06em;
+  color: #61dfca;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
-.featured-project > img {
+.ownership-badge {
+  color: #c1d4ce;
+  font-size: 0.75rem;
+}
+.featured-main {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 24px;
+  padding: 26px 28px;
+}
+.featured-copy {
+  min-width: 0;
+}
+.featured-project h3 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+.featured-project h3 span {
+  color: #61dfca;
+}
+.featured-project .featured-tagline {
+  color: #f2f5f4;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin: 12px 0;
+  font-weight: 600;
+}
+.featured-description {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  margin: 0;
+}
+.product-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: grid;
+  gap: 10px;
+}
+.product-benefits li {
+  padding-left: 14px;
+  border-left: 2px solid #00bfa6;
+}
+.product-benefits strong {
+  display: block;
+  color: #e1e1e6;
+  font-size: 0.85rem;
+}
+.product-benefits span {
+  display: block;
+  color: #a5b2c5;
+  font-size: 0.8rem;
+}
+.featured-project .actions {
+  margin-top: 20px;
+  gap: 16px;
+  justify-content: flex-start;
+}
+.product-link {
+  color: #c3e9df;
+  font-size: 0.85rem;
+}
+.featured-visual {
+  min-width: 0;
+  text-align: center;
+  padding: 24px 0;
+  background: radial-gradient(ellipse, #00bfa61c, transparent 70%);
+}
+.product-label {
+  color: #8fb5aa;
+  font-size: 0.64rem;
+  letter-spacing: 0.15em;
+}
+.featured-visual img {
+  display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 16/9;
-  object-fit: contain;
-  background: #0f1115;
-  border-radius: 10px;
+  margin: 18px 0;
 }
-.case-study {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
+.featured-visual p {
+  font-size: 0.75rem;
+  margin: 0;
 }
-.case-study h4 {
-  margin-bottom: 0;
+.project-details {
+  border-top: 1px solid #ffffff12;
+  background: #0f111540;
+}
+.project-details summary {
+  padding: 14px 28px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #e1e1e6;
+}
+.project-details summary span {
+  color: #a5b2c5;
+  font-size: 0.75rem;
+  margin-left: 12px;
+}
+.mobile-capabilities {
+  display: none;
+}
+.project-details-body {
+  padding: 0 28px 22px;
+  font-size: 0.9rem;
+}
+.project-details-body a {
+  color: #61dfca;
+}
+.site-header {
+  gap: 16px;
+}
+.main-nav {
+  margin-left: auto;
+}
+.about-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 8px 18px;
+  flex-shrink: 0;
+  border: 1px solid #61dfca;
+  border-radius: 8px;
+  background: #00bfa6;
+  color: #0f1115;
+  font-weight: 700;
+  box-shadow: 0 0 20px #00bfa618;
+}
+.about-button:hover {
+  background: #61dfca;
 }
 .project-grid {
   display: grid;
@@ -291,12 +415,61 @@ main:focus {
   .main-nav.is-open {
     display: flex;
   }
-  .case-study,
   .project-grid {
     grid-template-columns: 1fr;
   }
-  .featured-project {
-    padding: 20px;
+  .featured-heading {
+    padding: 16px 20px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .featured-main {
+    grid-template-columns: 1fr;
+    padding: 22px 20px;
+    gap: 16px;
+  }
+  .product-benefits {
+    display: none;
+  }
+  .mobile-capabilities {
+    display: block;
+  }
+  .featured-visual {
+    padding: 0;
+  }
+  .featured-visual img {
+    max-height: 170px;
+    object-fit: contain;
+    margin: 10px 0;
+  }
+  .product-label,
+  .featured-visual p {
+    display: none;
+  }
+  .project-details summary {
+    padding: 14px 20px;
+  }
+  .project-details summary span {
+    display: block;
+    margin-left: 18px;
+  }
+  .project-details-body {
+    padding: 0 20px 20px;
+  }
+  .site-header {
+    padding-inline: 16px;
+    gap: 10px;
+  }
+  .about-button {
+    margin-left: auto;
+    padding-inline: 12px;
+  }
+  .menu-toggle {
+    order: 3;
+  }
+  .main-nav {
+    margin-left: 0;
   }
   .actions {
     justify-content: center;
