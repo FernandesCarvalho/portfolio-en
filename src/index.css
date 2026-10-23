@@ -196,11 +196,14 @@ main:focus {
 .featured-main {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
+  grid-template-areas: 'copy visual' 'actions visual';
+  row-gap: 0;
   align-items: center;
-  gap: 24px;
+  column-gap: 24px;
   padding: 26px 28px;
 }
 .featured-copy {
+  grid-area: copy;
   min-width: 0;
 }
 .featured-project h3 {
@@ -253,7 +256,11 @@ main:focus {
   color: #c3e9df;
   font-size: 0.85rem;
 }
+.featured-actions {
+  grid-area: actions;
+}
 .featured-visual {
+  grid-area: visual;
   min-width: 0;
   text-align: center;
   padding: 24px 0;
@@ -370,10 +377,10 @@ main:focus {
   overflow-wrap: anywhere;
 }
 .about-content-header {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-  }
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
 .dialog-close {
   position: absolute;
   top: 8px;
@@ -430,9 +437,13 @@ main:focus {
     gap: 4px;
   }
   .featured-main {
+    grid-template-areas: 'copy' 'visual' 'actions';
     grid-template-columns: 1fr;
     padding: 22px 20px;
     gap: 16px;
+  }
+  .featured-project .featured-actions {
+    margin-top: 0;
   }
   .product-benefits {
     display: none;
@@ -481,7 +492,6 @@ main:focus {
   }
   .about-content {
     padding: 24px;
-
   }
   .about-content-header {
     align-items: center;

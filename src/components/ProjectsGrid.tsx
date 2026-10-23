@@ -61,22 +61,6 @@ export default function ProjectsGrid() {
                 <span>Manage warranties and your rental fleet.</span>
               </li>
             </ul>
-            <div className="actions">
-              <a
-                className="button"
-                href="mailto:fernandes.ventura25@gmail.com?subject=Mecaniko%20demo%20for%20my%20workshop"
-              >
-                Book a demo ↗
-              </a>
-              <a
-                className="product-link"
-                href="https://garage-app-blush-delta.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Explore the platform ↗
-              </a>
-            </div>
           </div>
           <div className="featured-visual">
             <span className="product-label">WORKSHOP MANAGEMENT SOFTWARE</span>
@@ -89,6 +73,22 @@ export default function ProjectsGrid() {
               decoding="async"
             />
             <p>One platform, from reception to delivery.</p>
+          </div>
+          <div className="actions featured-actions">
+            <a
+              className="button"
+              href="mailto:fernandes.ventura25@gmail.com?subject=Mecaniko%20demo%20for%20my%20workshop"
+            >
+              Book a demo ↗
+            </a>
+            <a
+              className="product-link"
+              href="https://garage-app-blush-delta.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Explore the platform ↗
+            </a>
           </div>
         </div>
         <details className="project-details">
